@@ -1,0 +1,16 @@
+<div class="articulos">
+
+    <div class="card mx-2" style="width: 18rem;" *ngFor="let item of dataBase">
+        <img src="{{item.imagen}}" class="card-img-top" alt="ImagenProducto">
+        <div class="card-body">
+          <h5 class="card-title"> {{item.nombre}}</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>{{item.precio}}€</p>
+          <div class="botones">
+            <a href="/article" class="btn btn-primary d-flex justify-content-center align-items-center mx-1">Ver</a>
+            <a class="btn btn-maniak mx-1" (click)="addToCart(this.item)">Añadir al carrito</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+

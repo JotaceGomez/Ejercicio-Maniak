@@ -1,0 +1,38 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Index</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products, index as id">
+      <th scope="row">{{product?.id}}</th>
+      <td><p>{{product?.nombre}}</p></td>
+      <td><p>{{product?.precio | currency}}</p></td>
+    </tr>
+  </tbody>
+
+</table>
+
+<div>
+  
+</div>
+
+<div class="d-flex justify-content-around">
+  <button class="btn btn-maniak" (click)="clearCart()">Vaciar Carrito</button>
+
+  <button class="btn btn-maniak" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Hacer Pedido</button>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">Total Compra</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      ...
+    </div>
+  </div>
+</div>
